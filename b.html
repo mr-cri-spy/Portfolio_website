@@ -1,0 +1,72 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirana M B - Server Developer – GenAI & Backend</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+            animation: backgroundAnimation 10s infinite alternate;
+        }
+        @keyframes backgroundAnimation {
+            0% { background: linear-gradient(135deg, #000000, #ff4081); }
+            100% { background: linear-gradient(135deg, #000000, #ff80ab); }
+        }
+        header {
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .menu-toggle {
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            background: #343836;
+            border-radius: 5px;
+            display: none;
+        }
+        nav {
+            display: flex;
+            flex-direction: row;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: 600;
+            transition: 0.3s;
+            display: block;
+            padding: 10px;
+        }
+        nav a:hover {
+            color: #ffcc00;
+            font-weight: 700;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-top: 100px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+            animation: fade
