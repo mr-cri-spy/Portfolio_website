@@ -69,4 +69,126 @@
             border-radius: 50%;
             margin-top: 100px;
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-            animation: fade
+            animation: fadeIn 2s ease-in-out;
+        }
+        section {
+            padding: 50px 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+        h1, h2, h3, p, ul {
+            animation: textFade 2s ease-in-out;
+        }
+        h1 {
+            font-size: 52px;
+            font-weight: 700;
+        }
+        h2 {
+            font-size: 40px;
+            font-weight: 600;
+        }
+        ul {
+            font-size: 24px;
+            font-weight: 400;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes textFade {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 10px;
+                background: rgba(0, 0, 0, 0.9);
+                padding: 15px;
+                border-radius: 8px;
+            }
+            nav.active {
+                display: flex;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <img src="img7.jpg" alt="Profile Picture" class="profile-pic">
+        <h1>Kirana M B</h1>
+        <h2>Server Developer – GenAI & Backend</h2>
+        <p>Backend developer skilled in building scalable server-side applications integrated with GenAI and NLP. Experienced in RAG pipelines, prompt engineering, and LLM APIs such as OpenAI, Claude, and DeepSeek. Passionate about automating workflows using Node.js, MongoDB, and event-driven architecture.</p>
+    </section>
+    
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            <li>MCA - $$$ University (Expected 2025)</li>
+            <li>BCA - $$$ University (Completed 2022)</li>
+            <li>PUC - $$$ PU College (Completed 2018)</li>
+        </ul>
+    </section>
+    
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Node.js, JavaScript, Python</li>
+            <li>MongoDB, Elasticsearch, Redis</li>
+            <li>REST APIs, Microservices, Event Queues</li>
+            <li>LLMs (GPT, Claude, LLaMA, DeepSeek)</li>
+            <li>Prompt Engineering, PII Masking, Guardrails</li>
+            <li>RAG Pipelines, RL-based Optimization</li>
+            <li>Git, Docker, Postman</li>
+        </ul>
+    </section>
+    
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <ul>
+            <li>✅ Generative AI Certification – DeepLearning.AI, Feb 2025</li>
+            <li>🧪 MIT 6.864 Advanced NLP – Ongoing (Self-paced)</li>
+            <li>Python Pro Bootcamp (Udemy)</li>
+            <li>Linux & Network Fundamentals (Linux Academy)</li>
+        </ul>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: kiraj8899@gmail.com</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/kiran-m-36334b343/" target="_blank">Kirana M B</a></p>
+    </section>
+</body>
+</html>
